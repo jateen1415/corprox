@@ -10,7 +10,7 @@ import { QualityServices } from "@/components/qualityServices";
 import { ConsultingAgency } from "@/components/consultingAgency";
 
 import styles from "./style.module.scss";
-import { AboutUs } from "@/components/aboutUs";
+import { AboutUs } from "@/components/homeAboutUs";
 
 export default function HomePage() {
   return (

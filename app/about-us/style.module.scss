@@ -1,0 +1,34 @@
+@import "~/styles/partials/config";
+
+.sectionHeading {
+    margin-bottom: text(larger);
+    text-align: center;
+    max-width: 50rem;
+    h2 {
+      font-size: text(xxxl);
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      color: color(background);
+      @include mobile {
+        font-size: 1.325rem;
+      }
+    }
+    p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: color(gray-light);
+      @include mobile {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+    }
+  }
+  
+  .sectionSpace {
+    @include mobile{
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }

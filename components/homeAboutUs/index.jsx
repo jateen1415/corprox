@@ -6,7 +6,7 @@ import { TfiControlForward } from "react-icons/tfi";
 import styles from "./style.module.scss";
 import { ImageCustom } from "../ui/imageCustom";
 
-function AboutUs({}) {
+function HomeAboutUs({}) {
   return (
     <div class="container">
       <div class="row justify-content-around">
@@ -98,4 +98,4 @@ function AboutUs({}) {
   );
 }
 
-export { AboutUs };
+export { HomeAboutUs };
