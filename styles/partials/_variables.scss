@@ -1,0 +1,33 @@
+$fonts: (
+  "primary": var(--font-primary),
+  "secondary": var(--font-secondary),
+
+);
+
+$colors: (
+  "alert-background": #5f583e,
+  "foreground": #ffffff,
+  "background": #000000,
+  "background-outline-dark": #181C32,
+  "background-soft-light": #F5F5F5,
+  "background-dark-navy": #1A2C79,
+  "secondary-background": #E8EAF2,
+  "gray-light": #707070,
+
+);
+
+$font-sizes: (
+  "xxs": 0.875rem,
+  "xs": 0.5rem,
+  "sm": 0.875rem,
+  "ssm": 0.9375rem,
+  "normal": 1rem,
+  "primary": 1.125rem,
+  "md": 1.1rem,
+  "lg": 1.25rem,
+  "xl": 1.5rem,
+  "xxl": 1.75rem,
+  "xxxl": 2rem,
+  "larger": 3rem,
+  "xl-larger": 3.125rem,
+);

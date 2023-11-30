@@ -1,0 +1,84 @@
+@import "~/styles/partials/config";
+@import "~/styles/partials/resets";
+@import "~/styles/partials/functions";
+@import "~/styles/partials/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none !important;
+}
+
+/* Remove default table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default image styles */
+img {
+  display: block;
+}
+
+/* Remove default button and input styles */
+button,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: font(primary);
+}
+
+p {
+  font-family: font(secondary);
+}
+
+body {
+
+  color: color(foreground);
+  font-family: font(secondary);
+  background-color: color(foreground);
+
+}
+
+.iconBgPurple {
+  background-color: #1a2c79;
+}
+.iconBgPurpleDarker {
+  background-color: #e80b66;
+}
+.iconBgPurpleBlue {
+  background-color: #0548b3;
+}
+
+.backgroundTweet {
+  background-color: #1ca1f2;
+}
+.backgroundFacebook {
+  background-color: #3b5999;
+}
+.backgroundYoutube {
+  background-color: #cd201f;
+}
+.backgroundDribble {
+  background-color: #ea4c89;
+}
