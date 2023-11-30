@@ -10,7 +10,7 @@ import { QualityServices } from "@/components/qualityServices";
 import { ConsultingAgency } from "@/components/consultingAgency";
 
 import styles from "./style.module.scss";
-import { AboutUs } from "@/components/homeAboutUs";
+import { HomeAboutUs } from "@/components/homeAboutUs";
 
 export default function HomePage() {
   return (
@@ -59,7 +59,7 @@ export default function HomePage() {
         </div>
       </section>
       <section className={`${styles.sectionSpace} ${styles.bgSoft}`}>
-        <AboutUs />
+        <HomeAboutUs />
       </section>
       <section>
         <CompanyStatus />
