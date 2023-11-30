@@ -28,8 +28,8 @@ function CompanyStatus({}) {
     <div className={styles.banner}>
       <div className="container">
         <div className={styles.column}>
-          {countStatus.map((data) => (
-            <div className={styles.counterCard}>
+          {countStatus.map((data,index) => (
+            <div key={index} className={styles.counterCard}>
               <div className={styles.counterIcon}>{data.icon}</div>
 
               <span className={`${styles.countNumber} my-2`}>
