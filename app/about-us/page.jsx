@@ -4,11 +4,15 @@ import { Footer } from "@/components/layout/footer";
 
 import styles from "./style.module.scss";
 import { MeetTeam } from "@/components/aboutUs/meetTeam";
+import { HeroBannerCustom } from "@/components/ui/heroBannerCustom";
 
 export default function AboutUs() {
   return (
     <div>
       <Header />
+      <section>
+        <HeroBannerCustom heading="About Us" />
+      </section>
       <section className={styles.sectionSpace}>
         <div className="container">
           <div className="row">
@@ -26,6 +30,7 @@ export default function AboutUs() {
                 src="/images/about-profile1.jpeg"
                 cardTitle="John Q. Public"
                 cardText=" Developer"
+                modalTitle="Twitter"
               />
             </div>
             <div className="col-12 col-md-6 col-lg-3 mb-md-4 mb-4 ">
@@ -33,6 +38,7 @@ export default function AboutUs() {
                 src="/images/about-profile1.jpeg"
                 cardTitle="Madurai Mani Iyer"
                 cardText="Lead Developer"
+                modalTitle="Facebook"
               />
             </div>
             <div className="col-12 col-md-6 col-lg-3 mb-md-4 mb-4 ">
@@ -40,6 +46,7 @@ export default function AboutUs() {
                 src="/images/about-profile1.jpeg"
                 cardTitle="Maria J. Go"
                 cardText=" Support Engineer"
+                modalTitle="Youtube"
               />
             </div>
             <div className="col-12 col-md-6 col-lg-3 mb-md-4 mb-4 ">
@@ -47,7 +54,11 @@ export default function AboutUs() {
                 src="/images/about-profile1.jpeg"
                 cardTitle="John Q. Public"
                 cardText=" Developer"
+                modalTitle="Dribble"
               />
+            </div>
+            <div className="d-flex justify-content-center col-12 col-md-12 col-lg-12 mb-md-4 mb-4 pt-4 ">
+            <button type="button" class="btn btn-outline-secondary">Open Form</button>
             </div>
           </div>
         </div>
