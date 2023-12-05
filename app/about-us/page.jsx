@@ -1,12 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
 import styles from "./style.module.scss";
 import { MeetTeam } from "@/components/aboutUs/meetTeam";
 import { HeroBannerCustom } from "@/components/ui/heroBannerCustom";
+import { Sidebar } from "@/components/aboutUs/Sidebar";
 
 export default function AboutUs() {
+  const [show, setShow] = useState(false);
   return (
     <div>
       <Header />
@@ -58,8 +61,24 @@ export default function AboutUs() {
               />
             </div>
             <div className="d-flex justify-content-center col-12 col-md-12 col-lg-12 mb-md-4 mb-4 pt-4 ">
-            <button type="button" class="btn btn-outline-secondary">Open Form</button>
+              <button
+                onClick={() => setShow(true)}
+                type="button"
+                class="btn btn-outline-secondary"
+              >
+                Open Form
+              </button>
             </div>
+            {show && (
+              <div class={styles.FormModal}>
+                <div class={styles.modalContent}>
+                  <span onClick={() => setShow(false)} class={styles.closeIcon}>
+                    ×
+                  </span>
+                  <Sidebar />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

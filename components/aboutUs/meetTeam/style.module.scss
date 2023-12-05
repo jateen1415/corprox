@@ -57,9 +57,9 @@
       position: absolute;
       top: 0;
       left: 0;
-  
+
       .modalContent {
-        border: 1px solid #000;
+        border: 0.063rem solid #000;
         height: 100%;
         width: 100%;
         display: flex;
@@ -76,8 +76,5 @@
         }
       }
     }
-   
   }
-
- 
 }

@@ -1,0 +1,13 @@
+@import "~/styles/partials/config";
+
+.sideNav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  background-color: #1c2765ed;
+  overflow-x: hidden;
+  padding-top: 1.25rem;
+}
