@@ -1,38 +1,73 @@
+import React, { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import styles from "./style.module.scss";
 
 function Sidebar({}) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [values, setValues] = useState({
+    password: "",
+    showPassword: false,
+  });
+
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword,
+    });
+  };
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <div className={styles.sidebarMain}>
         <div class={styles.sideNav}>
-          <form className="p-4">
-            <div class="form-group mt-3">
-              <label>Email address</label>
+          <form className={styles.form} action="mt-4">
+            <div class="form-group mb-3">
+              <label htmlFor="" className="mb-1">
+                Email Address
+              </label>
               <input
                 type="email"
-                class="form-control"
-                placeholder="Enter email"
+                name=""
+                id=""
+                className="form-control"
+                placeholder="Enter Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
-            <div class="form-group mt-3">
-              <label>Password</label>
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Password"
-              />
+            <div class="form-group">
+              <label htmlFor="" className="mb-1">
+                Password
+              </label>
+              <div className={styles.eyeInput}>
+                <input
+                  type={values.showPassword ? "text" : "password"}
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                  name=""
+                  id=""
+                  className="form-control"
+                  required
+                />
+                <span
+                  className={styles.eyePass}
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                >
+                  {values.showPassword ? <FaEye /> : <FaEyeSlash />}
+                </span>
+              </div>
             </div>
-            <div class="form-group mt-3">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label mx-2">Check me out</label>
-            </div>
-            <div className="d-flex justify-content-end">
-              <button type="submit" class="btn btn-danger mt-2">
-                Submit
+            <div className="form-group d-flex justify-content-end mt-4">
+              <button type="button" class="btn btn-danger">
+                Login
               </button>
             </div>
           </form>
