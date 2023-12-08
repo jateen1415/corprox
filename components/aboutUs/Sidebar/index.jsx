@@ -22,6 +22,22 @@ function Sidebar({}) {
     event.preventDefault();
   };
 
+  function SubmitButton() {
+    if (email && password) {
+      return (
+        <button className="btn btn-danger" type="button">
+          Submit
+        </button>
+      );
+    } else {
+      return (
+        <button className="btn btn-danger" type="button" disabled>
+          Submit
+        </button>
+      );
+    }
+  }
+
   return (
     <>
       <div className={styles.sidebarMain}>
@@ -42,6 +58,7 @@ function Sidebar({}) {
                 required
               />
             </div>
+
             <div class="form-group">
               <label htmlFor="" className="mb-1">
                 Password
@@ -65,10 +82,9 @@ function Sidebar({}) {
                 </span>
               </div>
             </div>
+
             <div className="form-group d-flex justify-content-end mt-4">
-              <button type="button" class="btn btn-danger">
-                Login
-              </button>
+              <SubmitButton />
             </div>
           </form>
         </div>

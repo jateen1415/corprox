@@ -1,0 +1,94 @@
+@import "~/styles/partials/config";
+
+.banner {
+  width: 100%;
+  position: relative;
+  background: url("../../../public/download.jpeg") no-repeat center center fixed;
+  width: 100%;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(
+      85deg,
+      rgba(26, 44, 121, 0.8) 30%,
+      rgba(232, 5, 102, 0.9) 100%
+    );
+  }
+  .heroText {
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .leadText {
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+    z-index: 9;
+  }
+  .column {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 0 1rem;
+    position: relative;
+    padding: 0 0.3125rem;
+    z-index: 2;
+
+    .downloadBtnWrap {
+      padding: 1rem;
+      text-align: center;
+      color: color(foreground);
+
+      .pillBtn {
+        color: color(foreground);
+        padding: 0.7rem 1.75rem;
+        border: 1px solid color(foreground);
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        &:hover {
+          background-color: color(foreground);
+          color: color(background);
+        }
+        .counterIcon {
+          height: 3rem;
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          margin-right: 1rem;
+        }
+        .pillTextGroup {
+          text-align: left;
+          .countNumber {
+            font-size: 0.875rem;
+            font-weight: 300;
+            line-height: 1.3;
+          }
+          .countText {
+            font-size: 1rem;
+            font-weight: 600;
+
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

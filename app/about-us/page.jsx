@@ -7,6 +7,7 @@ import styles from "./style.module.scss";
 import { MeetTeam } from "@/components/aboutUs/meetTeam";
 import { HeroBannerCustom } from "@/components/ui/heroBannerCustom";
 import { Sidebar } from "@/components/aboutUs/Sidebar";
+import { BusinessApp } from "@/components/aboutUs/businessApp";
 
 export default function AboutUs() {
   const [show, setShow] = useState(false);
@@ -81,6 +82,9 @@ export default function AboutUs() {
             )}
           </div>
         </div>
+      </section>
+      <section className="mb-5">
+        <BusinessApp heading="Download Apps Managing Business" />
       </section>
 
       <Footer />
