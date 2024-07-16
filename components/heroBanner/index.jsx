@@ -1,24 +1,25 @@
-import { CounterCard } from "../counterCard";
+import { ImageCustom } from "../ui/imageCustom";
 import styles from "./style.module.scss";
 
 function HeroBanner() {
   return (
     <div className={styles.banner}>
-      <div className={styles.heroImage}>
-        <div className="container">
-          <div className={styles.heroText}>
-            <h1 className={styles.displayHead}>
-              We Are Creative Corporate & Marketing Agency
-            </h1>
-            <p className={styles.leadText}>
-              We offer digital marketing agency. Find here details about our
-              company.Completely pontificate methodologies with viral sources
-              cross-unit action.
-            </p>
-            <CounterCard />
-          </div>
-        </div>
+      <div className={styles.heroText}>
+        <h1 className={styles.displayHead}>Visual Designer</h1>
+        <p className={styles.leadText}>
+          This is a template Figma file, turned into code using Anima. Learn
+          more at AnimaApp.com
+        </p>
+
+        <button>Contact</button>
       </div>
+
+      <ImageCustom
+              src="/banner-image.svg"
+              width="480"
+              height="360"
+              alt="Logo"
+            />
     </div>
   );
 }

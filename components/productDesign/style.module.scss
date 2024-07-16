@@ -1,0 +1,48 @@
+@import "~/styles/partials/config";
+
+.planList {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1.5rem;
+  padding: 2.625rem 1.5rem 2.625rem;
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .planBox {
+    text-align: center;
+    padding: 4rem 2.625rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include mobile {
+      padding: 0;
+    }
+
+    img {
+      margin-bottom: 2.625rem;
+    }
+
+    .sbTitle {
+      font-size: 1.6875rem;
+      font-weight: 600;
+      margin-bottom: 0.6875rem;
+      color: color(background);
+    }
+
+    .sbText {
+      font-size: 1.0625rem;
+      font-weight: 400;
+      color: color(background);
+      margin-bottom: 0;
+      max-width: 70%;
+
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+  }
+}
